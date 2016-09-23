@@ -60,8 +60,6 @@ class SocialPostingController extends Controller
                 // Extend the access token.
                 try {
                     $token = $oauth_client->getLongLivedAccessToken($token);
-                    dd($token);
-
                 } catch (FacebookSDKException $e) {
                     dd($e->getMessage());
                 }
